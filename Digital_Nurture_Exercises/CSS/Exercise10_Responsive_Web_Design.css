@@ -1,0 +1,29 @@
+/* Base navigation */
+nav a {
+  display: inline-block;
+  padding: 10px;
+}
+
+/* Media query for small screens */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  img {
+    width: 80%;
+    height: auto;
+  }
+
+  body {
+    font-size: 90%;
+  }
+}
+
+/* Flexbox bonus */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}

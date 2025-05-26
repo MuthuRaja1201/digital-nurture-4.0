@@ -1,0 +1,13 @@
+<body onbeforeunload="return 'Are you sure you want to leave?';">
+    <video id="promoVideo" width="400" controls oncanplay="videoReady()">
+        <source src="promo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <p id="videoMsg"></p>
+
+    <script>
+        function videoReady(){
+            document.getElementById("videoMsg").textContent = "Video ready to play!";
+        }
+    </script>
+</body>

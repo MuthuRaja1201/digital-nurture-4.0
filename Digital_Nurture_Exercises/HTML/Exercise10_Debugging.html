@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Debugging Practice</title>
+    <style>
+        #box {
+            width: 150px;
+            height: 100px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Debugging Test Page</h1>
+
+    <div id="box">Click Me</div>
+    <p id="message"></p>
+
+    <button onclick="calculateTotal()">Calculate</button>
+    <input type="number" id="qty" placeholder="Enter quantity">
+    <p>Total: <span id="total">0</span></p>
+
+    <script>
+        console.log("Page loaded successfully");
+
+        document.getElementById("box").addEventListener("click", function(){
+            alert("Box Clicked!");
+            this.style.backgroundColor = "yellow";
+        });
+
+        function calculateTotal(){
+            let qty = document.getElementById("qty").value;
+            console.log("Quantity entered:", qty);
+
+            if(qty === ""){
+                alert("Please enter quantity");
+                return;
+            }
+
+            // Intentional bug: price is undefined
+            let price = 10;
+            let total = qty * price;
+            document.getElementById("total").textContent = total;
+
+            console.log("Total calculated: " + total);
+        }
+    </script>
+
+</body>
+</html>
