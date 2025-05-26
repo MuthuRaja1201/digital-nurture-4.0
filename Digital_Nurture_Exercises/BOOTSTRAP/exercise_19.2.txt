@@ -1,0 +1,4 @@
+// In _variables.scss
+$primary: #ff5733;
+$border-radius: 1rem;
+// Then recompile with Sass
